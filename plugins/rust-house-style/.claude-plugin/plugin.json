@@ -1,0 +1,10 @@
+{
+  "name": "rust-house-style",
+  "version": "0.1.0",
+  "description": "The maintainer's Rust house style: numbered rules (IR-1..IR-48) and the skill that applies them.",
+  "author": { "name": "shep-pm" },
+  "homepage": "https://github.com/shep-pm/rust-house-style",
+  "repository": "https://github.com/shep-pm/rust-house-style",
+  "license": "MIT OR Apache-2.0",
+  "keywords": ["rust", "style", "review"]
+}

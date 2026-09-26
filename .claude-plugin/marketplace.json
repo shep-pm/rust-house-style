@@ -1,0 +1,12 @@
+{
+  "name": "rust-house-style",
+  "description": "The maintainer's Rust house style for shep-pm repos.",
+  "owner": { "name": "shep-pm" },
+  "plugins": [
+    {
+      "name": "rust-house-style",
+      "source": "./plugins/rust-house-style",
+      "description": "Numbered Rust rules (IR-1..IR-48) and the skill that applies them."
+    }
+  ]
+}
