@@ -7,7 +7,8 @@ The maintainer's Rust house style for shep-pm repos: one person's rules, not a c
 - `plugins/rust-house-style/docs/rules.md`: the rules, IR-1 to IR-48. Numbers stay stable because commit and review history cite them.
 - `plugins/rust-house-style/docs/lenses/`: the evidence behind them, from a read of `rand` 0.10.2.
 - `plugins/rust-house-style/skills/rust-house-style/`: the Claude Code skill that applies the rules.
-- `.claude-plugin/marketplace.json`: a plugin marketplace with that one plugin.
+- `plugins/tui-screen-capture/`: a second plugin, not tied to Rust. See [The TUI capture skill](#the-tui-capture-skill).
+- `.claude-plugin/marketplace.json`: a plugin marketplace with both plugins.
 - `.github/workflows/file-size.yml`: a reusable workflow that enforces the 1000-line limit from IR-48.
 
 ## Adopting the rules in a repo
@@ -63,6 +64,19 @@ Baseline entries need a reason to exist. Put the tracking issue in a comment abo
 ```
 
 `tests/file-size/run.sh` runs the workflow's own check step against scratch repos. `tests/rules-numbering.sh` checks that IR-1 to IR-48 each appear once.
+
+## The TUI capture skill
+
+`tui-screen-capture` runs a terminal UI in a pty at a set size, replays its output through a VT emulator, and prints the screen it drew, with `--attrs` to show which cells are actually painted. `--keys` drives it. It works for any TUI (ratatui, bubbletea, textual, ncurses) in any repo.
+
+Enable it in a repo the same way as step 1 above, with `"tui-screen-capture@rust-house-style": true`. To have it everywhere instead:
+
+```
+/plugin marketplace add shep-pm/rust-house-style
+/plugin install tui-screen-capture@rust-house-style
+```
+
+It needs `uv`, or `pyte` installed by hand, and a Unix pty: macOS, Linux, or WSL.
 
 ## Releases
 

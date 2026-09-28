@@ -1,12 +1,17 @@
 {
   "name": "rust-house-style",
-  "description": "The maintainer's Rust house style for shep-pm repos.",
+  "description": "The maintainer's Rust house style for shep-pm repos, and a TUI screen-capture skill for any repo.",
   "owner": { "name": "shep-pm" },
   "plugins": [
     {
       "name": "rust-house-style",
       "source": "./plugins/rust-house-style",
       "description": "Numbered Rust rules (IR-1..IR-48) and the skill that applies them."
+    },
+    {
+      "name": "tui-screen-capture",
+      "source": "./plugins/tui-screen-capture",
+      "description": "Run a terminal UI in a pty and read back the screen it drew."
     }
   ]
 }

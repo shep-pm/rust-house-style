@@ -1,0 +1,10 @@
+{
+  "name": "tui-screen-capture",
+  "version": "0.2.0",
+  "description": "Run a terminal UI in a pty at a chosen size and read back the screen it drew, in any language and any repo.",
+  "author": { "name": "shep-pm" },
+  "homepage": "https://github.com/shep-pm/rust-house-style",
+  "repository": "https://github.com/shep-pm/rust-house-style",
+  "license": "MIT OR Apache-2.0",
+  "keywords": ["tui", "terminal", "pty", "testing"]
+}
