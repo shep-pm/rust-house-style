@@ -23,6 +23,8 @@ painted, and report all of it green.
 uv run ${CLAUDE_SKILL_DIR}/scripts/capture.py --cols 160 --rows 48 -- <command that starts the TUI>
 ```
 
+Everything after the first `--` is the command, passed through untouched, so
+`-- cargo run --release -- tui` and `-- npm run dev -- --watch` both work.
 `uv run` installs the one dependency on its own; without `uv`, run
 `pip install pyte` and use `python3`. It needs a Unix pty: macOS, Linux, or
 WSL. Output is the reconstructed screen, one numbered line per row.

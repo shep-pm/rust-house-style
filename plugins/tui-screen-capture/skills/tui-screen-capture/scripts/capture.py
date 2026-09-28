@@ -113,9 +113,8 @@ def main():
     env.setdefault("TERM", "xterm-256color")
     env.setdefault("COLORTERM", "truecolor")
     keys = [k.encode().decode("unicode_escape") for k in a.keys]
-    argv = [x for x in a.argv if x != "--"]
 
-    raw = capture(a.cmd, argv, a.cols, a.rows, a.seconds, env, keys, a.settle)
+    raw = capture(a.cmd, a.argv, a.cols, a.rows, a.seconds, env, keys, a.settle)
     if a.raw:
         with open(a.raw, "wb") as fh:
             fh.write(raw)
