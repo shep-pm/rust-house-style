@@ -1,6 +1,6 @@
 ---
 name: rust-house-style
-description: Use when writing, reviewing, or refactoring ANY Rust in a shep-pm repo: new modules, types, traits, error enums, tests, docs, Cargo.toml edits, or CI config.
+description: "Use when writing, reviewing, or refactoring ANY Rust in a shep-pm repo: new modules, types, traits, error enums, tests, docs, Cargo.toml edits, or CI config."
 ---
 
 # Rust house style
